@@ -12,10 +12,16 @@ export function cleanContent(ref) {
   ref.innerHTML = '';
 }
 
-export function createPhotoModal(img, alt) {
-  const instance = basicLightbox.create(`
+
+ export function createPhotoModal(img, alt) {
+   const instance = basicLightbox.create(`
         <img src="${img}" alt="${alt}">
     `);
-
-  instance.show();
+  
+   
+  //  instance.show();
+  //  setTimeout(instance.show(), 1000);
+   setTimeout(() => instance.show(), 500);
+  
+  
 }

@@ -15,6 +15,8 @@ const inputButton = refs.inputBtn;
 const searchForm = refs.searchForm;
 searchForm.addEventListener('submit', onInputSearch);
 
+
+
 const photoCard = refs.photoCard;
 photoCard.addEventListener('click', onClickPhotoCard);
 
@@ -60,10 +62,18 @@ function onInputSearch(e) {
   }
 }
 
+
 function onClickPhotoCard(e) {
-  const photoEl = e.target;
+  const photoEl = e.target;  
   const largeImage = photoEl.dataset.largeImage;
+  if (largeImage === undefined) return
   const photoAlt = photoEl.getAttribute('alt');
 
-  createPhotoModal(largeImage, photoAlt);
-}
+  console.log("setTimeout: 500, open photo:", photoEl.dataset.largeImage)
+  // console.log("photoAlt = ", photoAlt)
+  
+
+  createPhotoModal(largeImage, photoAlt)
+  
+  }
+
