@@ -1,0 +1,80 @@
+.js_form {
+  display: flex;
+  position: relative;
+  top: 30px;
+}
+.search-form {
+  display: flex;
+  max-width: 640px;
+  align-items: center;
+}
+.form-control {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+}
+.container {
+  padding-right: 30px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.form-group,
+.submit-btn {
+  background-color: rgba(0, 0, 0, 0);
+  color: #424242;
+}
+
+.gallery {
+  margin-top: 100px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.submit-btn {
+  top: 36px;
+  width: 100px;
+}
+
+.form-group {
+  margin-top: 15px;
+}
+
+.gallery,
+.stats,
+.js_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats {
+  margin-top: 20px;
+}
+
+.stats-item {
+  margin-right: 50px;
+}
+
+.photo-card {
+  margin-right: 50px;
+}
+
+.submit-btn {
+  margin-left: 10px;
+}
+.search {
+  font-size: 30px;
+}
+.btn {
+  font-size: 30px;
+}
