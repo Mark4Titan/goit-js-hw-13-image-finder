@@ -5,10 +5,10 @@ export default class PixabayApiService {
         this.pageNumber = 1;
         this.perPage = 12;
         this.searchPhoto = "";
-        console.log(
-            "PixabayApiService ~ constructor ~ page: ",
-            this.pageNumber
-        );
+        // console.log(
+        //     "PixabayApiService ~ constructor ~ page: ",
+        //     this.pageNumber
+        // );
     }
 
     async fetchImages() {

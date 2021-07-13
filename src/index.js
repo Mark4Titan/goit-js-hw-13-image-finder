@@ -37,16 +37,17 @@ const observer = new IntersectionObserver(entries => {
 
 const scrollArea = refs.scrollArea;
 observer.observe(scrollArea);
-console.log('observer 2: ', observer);
+// console.log('observer 2: ', observer);
 // END LOAD MORE
 
 function onInputSearch(e) {
   e.preventDefault();
   const form = e.currentTarget;
-  console.log('onInputSearch ~ form: ', form);
+  // console.log('onInputSearch ~ form: ', form);
 
   const photoQuery = form.elements.query.value.trim();
-  console.log('onInputSearch ~ photoQuery: ', photoQuery);
+  // console.log('onInputSearch ~ photoQuery: ', photoQuery);
+  form.elements.query.value = '';
 
   if (photoQuery) {
     pixabayApiService.page = 1;
@@ -57,7 +58,7 @@ function onInputSearch(e) {
     const errMsg = 'Invalid query.';
     photoFetch(pixabayApiService, infoMsg, errMsg);
   } else {
-    console.log('onInputSearch ~ photoQuery 2: ', photoQuery);
+    // console.log('onInputSearch ~ photoQuery 2: ', photoQuery);
     appendItemCountryMarkup(refs.container, photosListTpl, '');
   }
 }
@@ -66,10 +67,14 @@ function onInputSearch(e) {
 function onClickPhotoCard(e) {
   const photoEl = e.target;  
   const largeImage = photoEl.dataset.largeImage;
+
+  // console.log("refs.inputBtn = ", refs.inputBtn);
+
+
   if (largeImage === undefined) return
   const photoAlt = photoEl.getAttribute('alt');
 
-  console.log("setTimeout: 500, open photo:", photoEl.dataset.largeImage)
+  // console.log("setTimeout: 500, open photo:", photoEl.dataset.largeImage)
   // console.log("photoAlt = ", photoAlt)
   
 

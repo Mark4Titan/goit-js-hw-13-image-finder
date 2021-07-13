@@ -9,7 +9,7 @@ export async function photoFetch(inagePromise, info_msg, error_msg) {
 }
 
 function pushPhotosDataToMarkup(images, info_msg, error_msg) {
-    console.log("images: ", images);
+    // console.log("images: ", images);
 
     try {
         if (images.hits.length > 0) {
